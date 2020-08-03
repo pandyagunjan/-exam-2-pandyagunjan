@@ -7,7 +7,7 @@ import rocks.zipcode.assessment2.collections.Inventory;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class RemoveItemFromInventory {
+public class RemoveItemFromInventoryTest {
     @Test
     public void test1() {
         String itemToBeRemoved = "Football";

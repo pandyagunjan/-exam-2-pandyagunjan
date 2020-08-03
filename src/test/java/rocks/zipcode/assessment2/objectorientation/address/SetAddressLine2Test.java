@@ -7,7 +7,7 @@ import rocks.zipcode.assessment2.objectorientation.Address;
 /**
  * @author leon on 28/11/2018.
  */
-public class SetAddressLine2 {
+public class SetAddressLine2Test {
     @Test
     public void test1() {
         // Given
