@@ -11,19 +11,24 @@ public class StringArrayUtils {
      * @return an array with all elements between `startingIndex` and `endingIndex`
      */
     public static String[] getSubArray(String[] arrayToBeSpliced, int startingIndex, int endingIndex) {
-       int hop=endingIndex-startingIndex;
+        int hop = endingIndex - startingIndex;
+        String[] tempArray;
+        if (hop > 0) {
+            tempArray = new String[hop];
+        } else {
+            tempArray = new String[0];
+        }
 
-           String[] tempArray = new String[hop];
-        if(hop > 0) {
-           int j = 0;
-           for (int i = startingIndex; i < endingIndex; i++) {
-               tempArray[j] = arrayToBeSpliced[i];
-               j++;
-           }
-           return tempArray;
-       }
-       else
-           return tempArray;
+        //  if(hop > 0) {
+        int j = 0;
+        for (int i = startingIndex; i < endingIndex; i++) {
+            tempArray[j] = arrayToBeSpliced[i];
+            j++;
+        }
+        return tempArray;
+    //}
+//       else
+//           return tempArray;
     }
 
 

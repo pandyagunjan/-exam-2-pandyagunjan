@@ -44,10 +44,22 @@ public class StringUtils {
      */
     public static Boolean isAlphaString(String string) {
 
+//        Boolean result = ((!string.equals(""))
+//                && (string != null)
+//                && (string.matches("^[a-zA-Z]*$")));;
+//        return result;
+        if (string == null) {
+            return false;
+        }
 
-        return ((!string.equals(""))
-                && (string != null)
-                && (string.matches("^[a-z|A-Z]*$")));
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            if (!(c >= 'A' && c <= 'Z') && !(c >= 'a' && c <= 'z') && c!= ' ') {
+                return false;
+            }
+        }
+        return true;
+
     }
 
     /**
@@ -57,7 +69,7 @@ public class StringUtils {
     public static Boolean isNumericString(String string) {
         return ((!string.equals(""))
                 && (string != null)
-                && (string.matches("^[0-9]*$")));
+                && (string.matches("^[0-9 ]*$")));
     }
 
     /**
@@ -67,6 +79,8 @@ public class StringUtils {
     public static Boolean isSpecialCharacterString(String string) {
         return ((!string.equals(""))
                 && (string != null)
-                && (string.matches("^[a-zA-Z0-9]*$")));
+                && (string.matches("^[0-9 ]*$"))
+                && (string.matches("^[a-zA-Z ]*$")));
+
     }
 }
