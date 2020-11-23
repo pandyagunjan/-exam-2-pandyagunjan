@@ -14,7 +14,10 @@ public class Inventory {
      */
     public Inventory(List<String> strings) {
         inventory = new ArrayList<>();
-        inventory.addAll(strings);
+        for (int i = 0; i < strings.size(); i++) {
+            inventory.add(strings.get(i));
+        }
+
     }
 
     /**
