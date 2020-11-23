@@ -6,6 +6,8 @@ import java.util.List;
 /**
  * Use a map to keep track of inventory in a store
  */
+
+//Misleading header , spend time to create MAP but then used the ArrayList which was being passed in the constructor
 public class Inventory {
 
     private List<String> inventory;

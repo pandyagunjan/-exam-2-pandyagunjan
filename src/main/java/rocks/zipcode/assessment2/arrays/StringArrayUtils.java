@@ -10,6 +10,9 @@ public class StringArrayUtils {
      * @param endingIndex - ending index of array
      * @return an array with all elements between `startingIndex` and `endingIndex`
      */
+
+    //https://javarevisited.blogspot.com/2013/04/JUnit-tutorial-example-test-exception-thrown-by-java-method.html#axzz6eeQJObnq
+    //Above URL gives the example where we need to match the JUNIT @Test expected
     public static String[] getSubArray(String[] arrayToBeSpliced, int startingIndex, int endingIndex) {
         int hop = endingIndex - startingIndex;
         String[] tempArray;
@@ -38,6 +41,10 @@ public class StringArrayUtils {
      * @param startingIndex - starting index of array to be spliced
      * @return an array all elements between after `startingIndex`
      */
+
+    //https://javarevisited.blogspot.com/2013/04/JUnit-tutorial-example-test-exception-thrown-by-java-method.html#axzz6eeQJObnq
+    //Above URL gives the example where we need to match the JUNIT @Test expected
+
     public static String[] getEndingArray(String[] arrayToBeSpliced, int startingIndex) {
         int hop=arrayToBeSpliced.length-startingIndex;
         String[] tempArray;
