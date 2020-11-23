@@ -9,7 +9,7 @@ import java.util.Iterator;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<p> implements Iterable<p>{
+public class Shelter <p> implements Iterable <p>{
     ArrayList<p> sheltor;
 
 
@@ -25,23 +25,23 @@ public class Shelter<p> implements Iterable<p>{
         return sheltor.size();
     }
 
-    public void add(Object object) {
+    public void add(p object) {
         sheltor.add((p) object);
     }
 
-    public Boolean contains(Object object) {
-        return sheltor.contains(object);
+    public Boolean contains(p object) {
+        return sheltor.contains((p)object);
     }
 
-    public void remove(Object object) {
+    public void remove(p object) {
         sheltor.remove((p)object);
     }
 
-    public Object get(Integer index) {
+    public p get(Integer index) {
         return sheltor.get(index);
     }
 
-    public Integer getIndexOf(Object ageable) {
+    public Integer getIndexOf(p ageable) {
     return sheltor.indexOf((p)ageable);
     }
 
