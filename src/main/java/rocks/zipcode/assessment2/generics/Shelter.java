@@ -26,15 +26,15 @@ public class Shelter <p> implements Iterable <p>{
     }
 
     public void add(p object) {
-        sheltor.add((p) object);
+        sheltor.add(object);
     }
 
     public Boolean contains(p object) {
-        return sheltor.contains((p)object);
+        return sheltor.contains(object);
     }
 
     public void remove(p object) {
-        sheltor.remove((p)object);
+        sheltor.remove(object);
     }
 
     public p get(Integer index) {
@@ -42,7 +42,7 @@ public class Shelter <p> implements Iterable <p>{
     }
 
     public Integer getIndexOf(p ageable) {
-    return sheltor.indexOf((p)ageable);
+    return sheltor.indexOf(ageable);
     }
 
     @Override
