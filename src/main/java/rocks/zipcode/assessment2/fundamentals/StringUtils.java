@@ -44,10 +44,7 @@ public class StringUtils {
      */
     public static Boolean isAlphaString(String string) {
 
-//        Boolean result = ((!string.equals(""))
-//                && (string != null)
-//                && (string.matches("^[a-zA-Z]*$")));;
-//        return result;
+
         if (string == null) {
             return false;
         }
@@ -91,13 +88,13 @@ public class StringUtils {
             return false;
         }
         for (int i = 0; i < string.length(); i++) {
-            if (string.charAt(i) > 47 && string.charAt(i) < 58){
+            if (string.charAt(i) >= '0' && string.charAt(i) <= '9'){
                 return false;
             }
-            else if (string.charAt(i) >64 && string.charAt(i) <91){
+            else if (string.charAt(i) >='A' && string.charAt(i) <='Z'){
                 return false;
             }
-            else if (string.charAt(i) > 96 && string.charAt(i) < 123){
+            else if (string.charAt(i) >= 'a' && string.charAt(i) <= 'z'){
                 return false;
             }
         }

@@ -16,7 +16,8 @@ public class StringArrayUtils {
         if (hop > 0) {
             tempArray = new String[hop];
         } else {
-            tempArray = new String[0];
+            throw new java.lang.IllegalArgumentException();
+
         }
 
         //  if(hop > 0) {
@@ -39,8 +40,14 @@ public class StringArrayUtils {
      */
     public static String[] getEndingArray(String[] arrayToBeSpliced, int startingIndex) {
         int hop=arrayToBeSpliced.length-startingIndex;
+        String[] tempArray;
+        if (hop > 0) {
+            tempArray = new String[hop];
+        } else {
+            throw new java.lang.IllegalArgumentException();
 
-        String[] tempArray = new String[hop];
+        }
+          tempArray = new String[hop];
         if(hop > 0) {
             int j = 0;
             for (int i = startingIndex; i < arrayToBeSpliced.length; i++) {
