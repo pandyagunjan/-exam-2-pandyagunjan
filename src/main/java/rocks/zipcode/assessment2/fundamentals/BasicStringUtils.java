@@ -7,7 +7,7 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        return string1.concat(string2);
     }
 
     /**
@@ -15,7 +15,13 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        char[] storeCharArray = string1.toCharArray();
+        StringBuilder storeReverse= new StringBuilder();
+
+        for (int i = storeCharArray.length - 1; i >= 0; i--)
+            storeReverse.append(storeCharArray[i]);
+        return storeReverse.toString();
+
     }
 
     /**
@@ -24,7 +30,17 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        char[] storeCharArray1 = string1.toCharArray();
+        StringBuilder storeReverse1= new StringBuilder();
+        char[] storeCharArray2 = string2.toCharArray();
+        StringBuilder storeReverse2= new StringBuilder();
+        for (int i = storeCharArray1.length - 1; i >= 0; i--)
+             storeReverse1.append(storeCharArray1[i]);
+
+        for (int j = storeCharArray2.length - 1; j >= 0; j--)
+            storeReverse2.append(storeCharArray2[j]);
+
+        return storeReverse1.toString().concat(storeReverse2.toString());
     }
 
     /**
@@ -33,7 +49,13 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
+//        if(charactersToRemove.length() == 1)
+//            string.replaceAll(String.valueOf(charactersToRemove), "");
+////        else
+//            for (int i = 0; i < string.length(); i++) {
+//                string.replaceAll(String.valueOf(charactersToRemove.charAt(i)),"");
+//            }
+        return string;
     }
 
     /**
