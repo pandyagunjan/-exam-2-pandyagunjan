@@ -30,17 +30,13 @@ public class IntegerArrayUtils {
      */
     public static Integer[] replace(Integer[] integerArray, int indexToInsertAt, Integer valueToBeInserted) {
         Integer[] tempArray= new Integer[integerArray.length];
-      //  int currentIndex=0;
         for(int i=0; i< integerArray.length ;i++)
         {
             if(i==indexToInsertAt)
                 tempArray[i]=valueToBeInserted;
             else
-
             tempArray[i]=integerArray[i];
-           // currentIndex++;
-        }
-
+         }
         return tempArray;
     }
 
@@ -50,7 +46,14 @@ public class IntegerArrayUtils {
      * @return element located at `indexToFetch`
      */
     public static Integer get(Integer[] integerArray, Integer indexToFetch) {
-        return null;
+        for(int i=0; i< integerArray.length ;i++)
+        {
+            if(i==indexToFetch)
+                return integerArray[i];
+
+        }
+
+        return 0;
     }
 
     /**
