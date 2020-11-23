@@ -30,11 +30,11 @@ public class Shelter<p> implements Iterable<p>{
     }
 
     public Boolean contains(Object object) {
-        return null;
+        return sheltor.contains(object);
     }
 
     public void remove(Object object) {
-        sheltor.remove(object);
+        sheltor.remove((p)object);
     }
 
     public Object get(Integer index) {
@@ -42,7 +42,7 @@ public class Shelter<p> implements Iterable<p>{
     }
 
     public Integer getIndexOf(Object ageable) {
-    return sheltor.indexOf(ageable);
+    return sheltor.indexOf((p)ageable);
     }
 
     @Override
