@@ -50,7 +50,6 @@ public class IntegerArrayUtils {
         {
             if(i==indexToFetch)
                 return integerArray[i];
-
         }
 
         return 0;
@@ -61,7 +60,17 @@ public class IntegerArrayUtils {
      * @return identical array with even-values incremented by 1 and odd-values decremented by 1
      */
     public static Integer[] incrementEvenDecrementOdd(Integer[] integerArray) {
-        return null;
+        Integer temp;
+        for(int i=0; i< integerArray.length ;i++)
+        {
+            temp=integerArray[i];
+            if(integerArray[i]%2==0)
+                integerArray[i]=temp+1;
+            else
+            if(integerArray[i]%2!=0)
+                integerArray[i]=temp-1;
+       }
+        return integerArray;
     }
 
     /**
@@ -69,7 +78,17 @@ public class IntegerArrayUtils {
      * @return identical array with even-values incremented by 1
      */
     public static Integer[] incrementEven(Integer[] integerArray) {
-        return null;
+
+        Integer temp;
+        for(int i=0; i< integerArray.length ;i++)
+        {
+            temp=integerArray[i];
+            if(integerArray[i]%2==0)
+                integerArray[i]=temp+1;
+
+        }
+        return integerArray;
+
     }
 
     /**
@@ -77,6 +96,15 @@ public class IntegerArrayUtils {
      * @return identical array with odd-values decremented by 1
      */
     public static Integer[] decrementOdd(Integer[] input) {
-        return null;
+        Integer temp;
+        for(int i=0; i< input.length ;i++)
+        {
+            temp=input[i];
+
+            if(input[i]%2!=0)
+                input[i]=temp-1;
+        }
+        return input;
+
     }
 }
